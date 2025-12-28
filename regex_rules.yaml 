@@ -1,0 +1,26 @@
+juniper:
+  - name: root_user_check
+    check_cmd: "show system users"
+    pattern: "sitanshu"
+    description: " ROOT user detected"
+    action_cmds:
+      - "configure private"
+      - "exit"
+
+cisco_xr:
+  - name: privileged_user_check
+    check_cmd: "show users"
+    pattern: "sitanshu"
+    description: " Privileged user detected"
+    action_cmds:
+      - "show processes cpu"
+      - "show memory summary"
+
+extreme:
+  - name: admin_session_check
+    check_cmd: "show session"
+    pattern: "sita"
+    description: " Admin session detected"
+    action_cmds:
+      - "disable port 50"
+      - "save"

@@ -1,0 +1,5 @@
+prompts:
+  - pattern: "overwrite it\\?\\s*\\(y/N\\)"
+    response: "y"
+  - pattern: "Do you want to continue\\?\\s*\\(y/n\\)"
+    response: "y"
